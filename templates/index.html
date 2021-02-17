@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traffic</title>
+
+
+</head>
+<body>
+
+	<h1> traffic pred</h1>
+
+	<form method='POST' action='/' enctype="multipart/form-data">
+		<input type='file' name="userfile" placeholder="Image">
+		
+		<input type='submit'>
+
+	</form>
+
+    {% if trafficPred %}
+        <img src="{{trafficPred['image']}}">
+	    <h1> pred : {{trafficPred['sign']}} </h1>
+
+    {% endif %}
+
+</body>
+</html>
